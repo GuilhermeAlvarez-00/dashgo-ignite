@@ -15,8 +15,10 @@ export function SearchBox() {
       position="relative"
       bg="gray.800"
       borderRadius="full"
+      htmlFor="searchbox"
     >
       <Input
+        id="searchbox"
         color="gray.50"
         variant="unstyled"
         placeholder="Buscar na plataforma"
