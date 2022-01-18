@@ -11,7 +11,7 @@ export function Sidebar() {
     lg: false
   })
 
-  if(isDrawerSidebar) {
+  if (isDrawerSidebar) {
     return (
       <Drawer isOpen={isOpen} placement="left" onClose={onClose} >
         <DrawerOverlay>

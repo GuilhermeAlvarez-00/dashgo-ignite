@@ -6,7 +6,7 @@ interface PaginationItemProps {
 }
 
 export function PaginationItem({ isCurrent = false, number }: PaginationItemProps) {
-  if(isCurrent) {
+  if (isCurrent) {
     return (
       <Button
         size="sm"
@@ -15,14 +15,14 @@ export function PaginationItem({ isCurrent = false, number }: PaginationItemProp
         colorScheme="pink"
         disabled
         _disabled={{
-        bg:
-        'pink.500',
-        cursor:
-        'default'
+          bg:
+            'pink.500',
+          cursor:
+            'default'
         }}
       >
-      {number}
-    </Button>
+        {number}
+      </Button>
     )
   }
 

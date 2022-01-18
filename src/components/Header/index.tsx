@@ -20,14 +20,14 @@ export function Header() {
       as="header"
       w="100%"
       maxWidth={1480}
+      px="6"
       h="20"
       mx="auto"
       mt="4"
-      px="6"
       align="center"
     >
-      { !isWideVersion && (
-        <IconButton 
+      {!isWideVersion && (
+        <IconButton
           aria-label="Open navigation"
           icon={<Icon as={RiMenuLine} />}
           fontSize="24"
@@ -40,13 +40,13 @@ export function Header() {
         </IconButton>
       )}
 
-			<Logo />
+      <Logo />
 
-			{ isWideVersion && <SearchBox /> }
+      {isWideVersion && <SearchBox />}
 
       <Flex align="center" ml="auto">
         <NotificationsNav />
-				
+
         <Profile showProfileData={isWideVersion} />
       </Flex>
     </Flex>

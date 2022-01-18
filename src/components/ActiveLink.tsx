@@ -11,11 +11,11 @@ export function ActiveLink({ children, shouldMatchExactHref, ...rest }: ActiveLi
   const { asPath } = useRouter()
   let isActive = false
 
-  if(shouldMatchExactHref && (asPath === rest.href || asPath === rest.as)) {
+  if (shouldMatchExactHref && (asPath === rest.href || asPath === rest.as)) {
     isActive = true
   }
 
-  if(!shouldMatchExactHref && (
+  if (!shouldMatchExactHref && (
     asPath.startsWith(String(rest.href)) ||
     asPath.startsWith(String(rest.as))
   )) {

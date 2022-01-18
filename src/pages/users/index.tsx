@@ -30,7 +30,7 @@ export default function UserList() {
                 fontSize="sm"
                 colorScheme="pink"
                 leftIcon={<Icon
-                as={RiAddLine} fontSize="20"
+                  as={RiAddLine} fontSize="20"
                 />}
               >
                 Criar novo
@@ -45,14 +45,14 @@ export default function UserList() {
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>Usuários</Th>
-                { isWideVersion && <Th>Data de cadastro</Th> }
+                {isWideVersion && <Th>Data de cadastro</Th>}
                 <Th width="8"></Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" /> 
+                  <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
                   <Box>
@@ -60,8 +60,8 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">gui06barboza@gmail.com</Text>
                   </Box>
                 </Td>
-                { isWideVersion && <Td>04 de abril de 2021</Td> }
-                { isWideVersion && (
+                {isWideVersion && <Td>04 de abril de 2021</Td>}
+                {isWideVersion && (
                   <Td>
                     <Button
                       as="a"
@@ -69,7 +69,7 @@ export default function UserList() {
                       fontSize="sm"
                       colorScheme="purple"
                       leftIcon={<Icon
-                      as={RiPencilLine} fontSize="16"
+                        as={RiPencilLine} fontSize="16"
                       />}
                     >
                       Editar
@@ -79,7 +79,7 @@ export default function UserList() {
               </Tr>
               <Tr>
                 <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" /> 
+                  <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
                   <Box>
@@ -87,8 +87,8 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">gui06barboza@gmail.com</Text>
                   </Box>
                 </Td>
-                { isWideVersion && <Td>04 de abril de 2021</Td> }
-                { isWideVersion && (
+                {isWideVersion && <Td>04 de abril de 2021</Td>}
+                {isWideVersion && (
                   <Td>
                     <Button
                       as="a"
@@ -96,7 +96,7 @@ export default function UserList() {
                       fontSize="sm"
                       colorScheme="purple"
                       leftIcon={<Icon
-                      as={RiPencilLine} fontSize="16"
+                        as={RiPencilLine} fontSize="16"
                       />}
                     >
                       Editar
@@ -106,7 +106,7 @@ export default function UserList() {
               </Tr>
               <Tr>
                 <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" /> 
+                  <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
                   <Box>
@@ -114,8 +114,8 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">gui06barboza@gmail.com</Text>
                   </Box>
                 </Td>
-                { isWideVersion && <Td>04 de abril de 2021</Td> }
-                { isWideVersion && (
+                {isWideVersion && <Td>04 de abril de 2021</Td>}
+                {isWideVersion && (
                   <Td>
                     <Button
                       as="a"
@@ -123,7 +123,7 @@ export default function UserList() {
                       fontSize="sm"
                       colorScheme="purple"
                       leftIcon={<Icon
-                      as={RiPencilLine} fontSize="16"
+                        as={RiPencilLine} fontSize="16"
                       />}
                     >
                       Editar

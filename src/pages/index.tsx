@@ -56,7 +56,7 @@ const Signin: NextPage = () => {
             label="Senha"
             type="password"
             error={errors.password}
-            {...register('password')} 
+            {...register('password')}
           />
         </Stack>
 

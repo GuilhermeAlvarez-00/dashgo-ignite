@@ -24,10 +24,10 @@ export function SearchBox() {
         placeholder="Buscar na plataforma"
         _placeholder={{
           color:
-          'gray.400'
+            'gray.400'
         }}
         px="4"
-        mr="4" 
+        mr="4"
       />
 
       <Icon as={RiSearchLine} fontSize="20" />
