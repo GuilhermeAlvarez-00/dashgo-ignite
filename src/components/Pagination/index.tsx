@@ -76,7 +76,7 @@ export function Pagination({
           <>
             {currentPage + 1 + siblingsCount < lastPage && (
               <Text color="gray.300" width="8" textAlign="center">
-                ...
+                ....
               </Text>
             )}
             <PaginationItem number={lastPage} />
