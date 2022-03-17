@@ -23,13 +23,14 @@ import { Header } from '../../components/Header'
 import { Pagination } from '../../components/Pagination'
 import { Sidebar } from '../../components/Sidebar'
 import { useEffect } from 'react'
+import { api } from '../../services/api'
 
 export default function UserList() {
   const { data, isLoading, isFetching, error } = useQuery(
     'users',
     async () => {
-      const response = await fetch('http://localhost:3000/api/users')
-      const data = await response.json()
+      const response = await api.get('/users')
+      const { data } = response
       const users = data.users.map((user) => ({
         ...user,
         createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
@@ -48,12 +49,6 @@ export default function UserList() {
     base: false,
     lg: true,
   })
-
-  useEffect(() => {
-    fetch('http://localhost:3000/api/users')
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-  }, [])
 
   return (
     <Box>
