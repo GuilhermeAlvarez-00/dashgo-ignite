@@ -25,18 +25,24 @@ import { Sidebar } from '../../components/Sidebar'
 import { useEffect } from 'react'
 
 export default function UserList() {
-  const { data, isLoading, error } = useQuery('users', async () => {
-    const response = await fetch('http://localhost:3000/api/users')
-    const data = await response.json()
-    const users = data.users.map((user) => ({
-      ...user,
-      createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
-        dateStyle: 'long',
-      }),
-    }))
+  const { data, isLoading, error } = useQuery(
+    'users',
+    async () => {
+      const response = await fetch('http://localhost:3000/api/users')
+      const data = await response.json()
+      const users = data.users.map((user) => ({
+        ...user,
+        createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
+          dateStyle: 'long',
+        }),
+      }))
 
-    return users
-  })
+      return users
+    },
+    {
+      staleTime: 1000 * 5, // 5 seconds
+    }
+  )
 
   const isWideVersion = useBreakpointValue({
     base: false,
