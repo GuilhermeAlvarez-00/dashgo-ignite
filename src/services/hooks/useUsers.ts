@@ -8,9 +8,18 @@ type User = {
   createdAt: string
 }
 
-export async function getUsers(): Promise<User[]> {
-  const response = await api.get('/users')
-  const { data } = response
+type GetUserResponse = {
+  totalCount: number
+  users: User[]
+}
+
+export async function getUsers(page: number): Promise<GetUserResponse> {
+  const response = await api.get('/users', {
+    params: {
+      page,
+    },
+  })
+  const { data, headers } = response
   const users = data.users.map((user) => ({
     ...user,
     createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
@@ -18,11 +27,17 @@ export async function getUsers(): Promise<User[]> {
     }),
   }))
 
-  return users
+  const totalCount = Number(headers['x-total-count'])
+  console.log('total count = ', totalCount)
+
+  return {
+    users,
+    totalCount,
+  }
 }
 
-export function useUsers() {
-  return useQuery('users', getUsers, {
+export function useUsers(page: number) {
+  return useQuery(['users', page], () => getUsers(page), {
     staleTime: 1000 * 5, // 5 seconds
   })
 }
